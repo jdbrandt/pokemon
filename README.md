@@ -1,2 +1,2 @@
 # pokemon
-Personal set of Project Euler solutions
+Simulator for the Pokemon TCG
