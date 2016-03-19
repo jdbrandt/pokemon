@@ -19,7 +19,7 @@ public abstract class Pokemon implements Card
     private final ArrayList<Type> type;
     private final int retreatCost;
     private final Type weakness;
-    private final Type reisistance;
+    private final Type resistance;
     
     
     
@@ -63,13 +63,7 @@ public abstract class Pokemon implements Card
         attachedEnergy = new ArrayList<Type>();
     }
     
-    public Pokemon(int maxhp, String n, ArrayList<Attribute> allattributes, ArrayList<Type> t, int retreatcost, Type weak, Type resis, ArrayList<Pokemon> attachedPokes, ArrayList<Type> attachedE)
-    {
-        this(maxhp, n, allattributes, t, retreatcost, weak, resis, attachedPokes);
-        attachedEnergy = attachedE;
-        
-        attachedTools = new ArrayList<Tool>();
-    }
+
     
     public Pokemon(int maxhp, String n, ArrayList<Attribute> allattributes, ArrayList<Type> t, int retreatcost, Type weak, Type resis, ArrayList<Pokemon> attachedPokes, ArrayList<Tool> ts, ArrayList<Type> attachedE)
     {
