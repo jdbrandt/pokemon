@@ -3,26 +3,20 @@ import java.util.*;
 public abstract class Pokemon implements Card
 {
 
-    protected enum Type 
-    {
-        G, R, W, L, F, P, C, D, M, N, Y
-    }
-    protected  enum Stage
-    {
-        ONE, TWO, THREE, EX, MEX, BREAK, BABY
-    }    
 
-    private int maxHP;
-    private String name;
-    private ArrayList<Attribute> allAttributes;
-    private ArrayList<Type> type;
-    private int retreatCost;
-    private Type weakness;
-    private Type resistance;
-    private int currentHP;
-    private ArrayList<Type> attachedEnergy;
-    private ArrayList<Tool> attachedTools;
-    private ArrayList<Pokemon> attachedPokemon;
+
+
+    protected int maxHP;
+    protected String name;
+    protected ArrayList<Attribute> allAttributes;
+    protected ArrayList<Type> type;
+    protected int retreatCost;
+    protected Type weakness;
+    protected Type resistance;
+    protected int currentHP;
+    protected ArrayList<Type> attachedEnergy;
+    protected ArrayList<Tool> attachedTools;
+    protected ArrayList<Pokemon> attachedPokemon;
 
     public Pokemon(int maxhp, String n, ArrayList<Attribute> allattributes, ArrayList<Type> t, int retreatcost, Type weak, Type resis) 
     {
