@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Player()
+comment1.params=
+comment1.target=void\ setDeck()
+comment2.params=
+comment2.target=java.util.ArrayList\ getDeck()
+comment2.text=\n\ Will\ implement\ beyond\ bare-bones\ at\ later\ date\n
+numComments=3
