@@ -7,27 +7,71 @@
  */
 public class Game
 {
-    // instance variables - replace the example below with your own
-    private int x;
+
+    private Player p1;
+    private Player p2;
+    private Player currentPlayer;
+    
+    private Stadium currentStadium;
 
     /**
      * Constructor for objects of class Game
      */
-    public Game()
+    public Game(Player p1, Player p2)
     {
-        // initialise instance variables
-        x = 0;
+        this.p1 = p1;
+        this.p2 = p2;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+    public boolean isSetup()
     {
-        // put your code here
-        return x + y;
+        return checkDeckSize() && check4Cards();
     }
+
+    private boolean checkDeckSize()
+    {
+        return p1.getDeck().size() == 60 && p2.getDeck().size() == 60;
+    }
+
+    private boolean check4Cards()
+    {
+
+        for (Card c1 : p1.getDeck())
+        {
+            int counter = 0;
+            for (Card c2 : p1.getDeck())
+            {
+                if (c1.equals(c2))
+                {
+                    counter += 1;
+                }
+            }
+            if (counter > 4)
+            {
+                return false;
+            }
+        }
+
+        for (Card c1 : p2.getDeck())
+        {
+            int counter = 0;
+            for (Card c2 : p2.getDeck())
+            {
+                if (c1.equals(c2))
+                {
+                    counter += 1;
+                }
+            }
+            if (counter > 4)
+            {
+                return false;
+            }
+        }
+
+        return true;
+
+    }
+    
+    
+    
 }

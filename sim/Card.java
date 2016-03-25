@@ -2,7 +2,7 @@ public interface Card
 {
 
     
-    public abstract void getEffect();
+    public abstract Effect getEffect();
     
     
     

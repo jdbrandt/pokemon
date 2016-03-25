@@ -184,7 +184,7 @@ public abstract class Pokemon implements Card
 
     
     
-    public abstract String getEffect(Attribute attr);
+    public abstract Effect getEffect(Attribute attr);
     
     
     
