@@ -8,4 +8,5 @@ comment2.params=
 comment2.target=boolean\ checkDeckSize()
 comment3.params=
 comment3.target=boolean\ check4Cards()
+comment3.text=\n\ Purpose\:\ Make\ sure\ each\ deck\ has\ strictly\ less\ than\ 5\ of\ the\ same\ card\ (b/c\ (n<5)\ <\=\=>\ \!(n>4)\ if\ n\ is\ an\ element\ of\ set\ of\ integers)\ \ \n\ Future\ todos\:\ Possibly\ change\ return\ type\ from\ boolean\ to\ int\ to\ allow\ for\ different\ errors\ (0\ if\ everything's\ hunky-dory,\ 1\ if\ p1\ failed,\ 2\ if\ p2\ failed)?\ Maybe\ split\n\ into\ 2\ method\ calls,\ where\ check4Cards\ takes\ an\ ArrayList<Cards>?\n
 numComments=4
