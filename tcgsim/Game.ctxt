@@ -5,8 +5,18 @@ comment0.text=\n\ Constructor\ for\ objects\ of\ class\ Game\n
 comment1.params=
 comment1.target=boolean\ isSetup()
 comment2.params=
-comment2.target=boolean\ checkDeckSize()
-comment3.params=
-comment3.target=boolean\ check4Cards()
-comment3.text=\n\ Purpose\:\ Make\ sure\ each\ deck\ has\ strictly\ less\ than\ 5\ of\ the\ same\ card\ (b/c\ (n<5)\ <\=\=>\ \!(n>4)\ if\ n\ is\ an\ element\ of\ set\ of\ integers)\ \ \n\ Future\ todos\:\ Possibly\ change\ return\ type\ from\ boolean\ to\ int\ to\ allow\ for\ different\ errors\ (0\ if\ everything's\ hunky-dory,\ 1\ if\ p1\ failed,\ 2\ if\ p2\ failed)?\ Maybe\ split\n\ into\ 2\ method\ calls,\ where\ check4Cards\ takes\ an\ ArrayList<Cards>?\n
-numComments=4
+comment2.target=void\ setupGame()
+comment3.params=p
+comment3.target=void\ doTurn(Player)
+comment4.params=
+comment4.target=boolean\ checkDeckSize()
+comment5.params=
+comment5.target=boolean\ check4Cards()
+comment5.text=\n\ Purpose\:\ Make\ sure\ each\ deck\ has\ strictly\ less\ than\ 5\ of\ the\ same\ card\ (b/c\ (n<5)\ <\=\=>\ \!(n>4)\ if\ n\ is\ an\ element\ of\ set\ of\ integers)\ \ \n\ Future\ todos\:\ Possibly\ change\ return\ type\ from\ boolean\ to\ int\ to\ allow\ for\ different\ errors\ (0\ if\ everything's\ hunky-dory,\ 1\ if\ p1\ failed,\ 2\ if\ p2\ failed)?\ Maybe\ split\n\ into\ 2\ method\ calls,\ where\ check4Cards\ takes\ an\ ArrayList<Cards>?\n
+comment6.params=
+comment6.target=void\ resolveBetweenTurns()
+comment6.text=\n\ IMPLEMENT\ THIS\ LATER\!\!\!\n
+comment7.params=
+comment7.target=boolean\ isWon()
+comment7.text=\n\ PERSONALLY\ IMPLEMENT\ THIS\ METHOD\!\!\!\n
+numComments=8

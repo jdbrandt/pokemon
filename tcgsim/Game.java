@@ -1,4 +1,4 @@
-
+import java.util.*;
 /**
  * Write a description of class Game here.
  * 
@@ -13,6 +13,8 @@ public class Game
     private Player currentPlayer;
     
     private Stadium currentStadium;
+    
+    private int turnNumber; // if p1 starts, then p1 starts on turn number 1, p2 starts on turn number 2, therefore p1 is on turnNumber%2==1, p2 on turnNumber%2==0;
 
     /**
      * Constructor for objects of class Game
@@ -27,7 +29,52 @@ public class Game
     {
         return checkDeckSize() && check4Cards();
     }
-
+    
+    public void setupGame() throws BadDeckException
+    {
+        if (!isSetup())
+        {
+            throw new BadDeckException();
+        }
+        
+        int p1Mulligans = p1.drawOpeningHand();
+        int p2Mulligans = p2.drawOpeningHand();
+        
+        p1.chooseActivePokemonSetup();
+        p2.chooseActivePokemonSetup();
+        
+        //NOT A MISTAKE! p1 draws mulligans based off of p2's # of mulligans, vice versa. 
+        p1.drawNCards(p2Mulligans);
+        p2.drawNCards(p1Mulligans);
+        
+        p1.chooseBenchedPokemonSetup();
+        p2.chooseBenchedPokemonSetup();
+        
+        //change this value if you want to adjust prizes
+        int numPrizes = 6;
+        
+        for (int i = 0; i < numPrizes; i++)
+        {
+            p1.addPrizeFromDeck();
+            p2.addPrizeFromDeck();
+        }
+        
+        turnNumber = 0;
+        
+        
+    }
+    
+    //Is this really the best way to do it? Sure, I guess...
+    public void doTurn(Player p)
+    {
+        p.doTurn();
+        resolveBetweenTurns();
+    }
+    
+    
+    
+    
+    
     private boolean checkDeckSize()
     {
        //allows for easily adjustable formats
@@ -92,6 +139,19 @@ public class Game
 
     }
     
+    /**
+     * IMPLEMENT THIS LATER!!!
+     */
+    private void resolveBetweenTurns()
+    {
     
+    }
     
+    /**
+     * PERSONALLY IMPLEMENT THIS METHOD!!!
+     */
+    public boolean isWon()
+    {
+        return true;
+    }
 }
